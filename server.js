@@ -1,7 +1,7 @@
 var express = require('express');
 var handlebars = require('express-handlebars').create({
 	defaultLayout:'main',
-	extname: '.hbs'
+	extname:'.hbs'
 });
 
 var app = express();
