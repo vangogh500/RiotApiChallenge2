@@ -19,5 +19,6 @@ app.use(function(err, req, res, next){
 	res.send('500 - Server Error');
 });
 
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), app.get('ip'), function() {
+	console.log("Server is running");
 });
