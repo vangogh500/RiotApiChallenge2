@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "BMB Statistics",
+  "version": "0.0.1",
+  "description": "Riot API Challenge 2.0",
   "keywords": [
     "OpenShift",
     "Node.js",
