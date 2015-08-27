@@ -6,8 +6,8 @@ var handlebars = require('express-handlebars').create({
 
 var app = express();
 
-app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars');
+app.engine('hbs', handlebars.engine);
+app.set('view engine', 'hbs');
 
 // Set port and ip
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
