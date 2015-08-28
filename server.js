@@ -19,7 +19,7 @@ var opts = {
 
 // custom modules
 var credentials = require('./credentials.js');
-var riot = require('./lib/riot.js')({
+var riot = require('./lib/riot/riot.js')({
 	key: credentials.riot.key
 });
 
