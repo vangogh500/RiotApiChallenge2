@@ -20,7 +20,7 @@ var opts = {
 // custom modules
 var credentials = require('./credentials.js');
 
-mongoose.connect(credentials.mongo.development.connectionString, opts);
+mongoose.connect(credentials.mongo.connectionString, opts);
 
 // Set port and ip
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
