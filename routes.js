@@ -5,8 +5,8 @@ module.exports = function(app) {
 	app.get('/', mainHandler.index);
 
 	// 404 page
-	app.use(mainHandler.404);
+	app.use(mainHandler.notFound);
 	
 	// 500 page
-	app.use(mainHandler.500);
+	app.use(mainHandler.internalError);
 };
