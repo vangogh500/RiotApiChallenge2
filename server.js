@@ -19,8 +19,14 @@ var opts = {
 
 // custom modules
 var credentials = require('./credentials.js');
+var riot = require('./lib/riot.js')({
+	key: credentials.riot.key
+});
+
+riot.test();
 
 mongoose.connect(credentials.mongo.connectionString, opts);
+
 
 // Set port and ip
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
