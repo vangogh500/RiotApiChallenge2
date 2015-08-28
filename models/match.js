@@ -7,7 +7,7 @@ var matchSchema = mongoose.Schema({
 		lane: String,
 		role: String,
 		highestAchievedSeasonTier: String,
-		winner: boolean,
+		winner: Boolean,
 		summs: [Number],
 		runes: [Number],
 		masteries: [Number],
