@@ -11,21 +11,16 @@ app.set('view engine', 'hbs');
 
 // mongoose
 var mongoose = require('mongoose');
-var opts = {
-	server: {
-		socketOptions: { keepAlive: 1 }
-	}
-};
 
 // custom modules
 var credentials = require('./credentials.js');
 
 switch(app.get('env')) {
 	case 'development':
-		mongoose.connect(credentials.mongo.development.connectionString, opts);
+		mongoose.connect(credentials.mongo.development.connectionString);
 		break;
 	case 'production':
-		mongoose.connect(credentials.mongo.development.connectionString, opts);
+		mongoose.connect(credentials.mongo.development.connectionString);
 		break;
 	default:
 		throw new Error('Unknown execution environment: ' + app.get('env'));
