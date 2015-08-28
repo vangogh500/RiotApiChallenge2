@@ -9,6 +9,9 @@ var app = express();
 app.engine('hbs', handlebars.engine);
 app.set('view engine', 'hbs');
 
+// custom modules
+var credentials = require('./credentials.js');
+
 // Set port and ip
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP);
