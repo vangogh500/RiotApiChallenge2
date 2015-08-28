@@ -18,7 +18,7 @@ var opts = {
 };
 
 // custom modules
-var credentials = require('/credentials.js');
+var credentials = require('./credentials.js');
 
 mongoose.connect(credentials.mongo.development.connectionString, opts);
 
