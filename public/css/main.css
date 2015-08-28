@@ -9,6 +9,7 @@
 }
 
 body {
+	height: 100%;
 	font-family: custom;
 	background-color: #EDEFF0;
 }
