@@ -26,23 +26,11 @@ mongoose.connect(credentials.mongo.development.connectionString, opts);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP);
 
-app.get('/', function(req,res){
-	res.render('index');
-});
-
+// Set up middle ware for client side assets
 app.use(express.static(__dirname + '/public'));
 
-// 404 page
-app.use(function(req,res){
-	res.status(404);
-	res.render('404');
-});
-// 500 page
-app.use(function(err, req, res, next){
-	console.error(err.stack);
-	res.status(500);
-	res.render('500');
-});
+// Set up routes
+require('./routes.js')(app);
 
 app.listen(app.get('port'), app.get('ip'), function() {
 	console.log("Server is running");
