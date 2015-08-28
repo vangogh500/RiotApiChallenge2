@@ -1,18 +1,12 @@
+var mainHandler = require('./handlers/main.js');
+
 module.exports = function(app) {
 	// index page
-	app.get('/', function(req,res){
-	res.render('index');
-	});
+	app.get('/', mainHandler.index);
 
 	// 404 page
-	app.use(function(req,res){
-		res.status(404);
-		res.render('404');
-	});
+	app.use(mainHandler.404);
+	
 	// 500 page
-	app.use(function(err, req, res, next){
-		console.error(err.stack);
-		res.status(500);
-		res.render('500');
-	});
+	app.use(mainHandler.500);
 };
