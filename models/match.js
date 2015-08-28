@@ -19,9 +19,11 @@ var matchSchema = mongoose.Schema({
 		assists: Number,
 		gold: Number,
 		magicDmg: Number,
-		attackDmg: Number,
+		physDmg: Number,
 		trueDmg: Number,
 		dmgTaken: Number,
+		ccDurationDealt: Number,
+		neutralMinionsKilledTeamJg: Number,
 		teamBarrons: Number,
 		teamDragons: Number,
 		teamTowers: Number
