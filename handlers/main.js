@@ -1,5 +1,5 @@
 exports.index = function(req, res){
-	res.render('home');
+	res.render('index');
 };
 
 exports.notFound = function(req, res){
