@@ -69,4 +69,4 @@ var participantSchema = mongoose.Schema({
 });
 
 var Participant = mongoose.model('Participant', participantSchema);
-module.exports = Match;
+module.exports = Participant;
