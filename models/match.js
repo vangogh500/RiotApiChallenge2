@@ -1,32 +1,11 @@
 var mongoose = require('mongoose');
 
 var matchSchema = mongoose.Schema({
-	id: Number,
-	participants: [{
-		champion: Number,
-		lane: String,
-		role: String,
-		highestAchievedSeasonTier: String,
-		winner: Boolean,
-		summs: [Number],
-		runes: [Number],
-		masteries: [Number],
-		items: [Number],
-		brawlerID: Number,
-		brawlerUpgrades: [Number],
-		kills: Number,
-		deaths: Number,
-		assists: Number,
-		gold: Number,
-		magicDmg: Number,
-		physDmg: Number,
-		trueDmg: Number,
-		dmgTaken: Number,
-		ccDurationDealt: Number,
-		neutralMinionsKilledTeamJg: Number,
-		teamBarrons: Number,
-		teamDragons: Number,
-		teamTowers: Number
+	matchId: Number,
+	region: String,
+	teams: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Team'
 	}],
 	matchDuration: Number,
 	matchCreation: Number
