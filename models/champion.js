@@ -4,73 +4,73 @@ var championSchema = mongoose.Schema({
 	championId: Number,
 	name: String,
 	imgURL: String,
-	matches: [{
-		type: mongoose.Schema.Types.ObjectId,
-		ref: 'Match'
-	}],
 	regionalStats: [{
 		regionName: String,
+		matches: [{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Match'
+		}],
 		picks: Number,
 		wins: Number,
 		lanes: [{
-			lane: String,
-			match: [{
+			laneName: String,
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		roles: [{
-			role: String,
-			match: [{
+			roleName: String,
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		ranks: [{
-			rank: String,
-			match: [{
+			rankName: String,
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		summs: [{
 			summID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		runes: [{
 			runeID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		masteries: [{
 			masteryID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		items: [{
 			itemID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		brawlers: [{
 			brawlerID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
 		}],
 		brawlerUpgrades: [{
 			brawlerID: Number,
-			match: [{
+			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
 			}]
@@ -102,10 +102,10 @@ var championSchema = mongoose.Schema({
 			totalHeal: Number,
 			neutralMinionsKilledEnemyJg: Number,
 			neutralMinionsKilledTeamJg: Number,
-			firstBloodKill: Boolean,
-			firstBloodAssist: Boolean,
-			firstTowerKill: Boolean,
-			firstTowerAssist: Boolean,
+			firstBloodKill: Number,
+			firstBloodAssist: Number,
+			firstTowerKill: Number,
+			firstTowerAssist: Number,
 			towerKills: Number,
 			csPerMin: {
 				zeroToTen: Number,

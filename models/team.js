@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var teamSchema = mongoose.Schema({
 	teamId: Number,
+	winner: Boolean,
 	participants: [{
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Participant'
