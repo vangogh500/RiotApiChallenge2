@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 
+var schema = new Schema({ _id: false });
+
 var championSchema = mongoose.Schema({
 	championId: Number,
 	name: String,
@@ -127,7 +129,7 @@ var championSchema = mongoose.Schema({
 			}	
 		}
 	}]
-});
+}, { _id: false });
 championSchema.methods.getWinRate = function(){
 	return (this.wins / this.picks);
 };
