@@ -18,8 +18,8 @@ var opts = {
 };
 
 // custom modules
-var datasets = require('./lib/riot/datasets.js');
-datasets.get('na');
+var dataset = require('./lib/riot/dataset.js');
+dataset.get('na');
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
