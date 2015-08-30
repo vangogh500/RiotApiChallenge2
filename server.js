@@ -10,7 +10,7 @@ app.engine('hbs', handlebars.engine);
 app.set('view engine', 'hbs');
 
 // mongoose
-var credentials = require('../../credentials.js');
+var credentials = require('./credentials.js');
 var mongoose = require('mongoose');
 var opts = {
 	server: {
