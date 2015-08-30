@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 var championSchema = mongoose.Schema({
 	championId: Number,
 	name: String,
-	imgURL: String,
+	img: String,
+	sprite: String,
 	regionalStats: [{
 		regionName: String,
 		matches: [{

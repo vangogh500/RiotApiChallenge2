@@ -26,7 +26,7 @@ var riot = require('./lib/riot/riot.js')({
 	region: 'na'
 });
 
-riot.test(1907069332, matchSchematizer.schematize);
+riot.get(1907069332, matchSchematizer.schematize);
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
