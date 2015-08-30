@@ -10,7 +10,10 @@ var itemSchema = mongoose.Schema({
 		wins: Number,
 		champions: [{
 			championId: Number,
-			matches: [Number]
+			matches: [{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'Match'
+			}]
 		}],
 		matches: [{
 			type: mongoose.Schema.Types.ObjectId,
