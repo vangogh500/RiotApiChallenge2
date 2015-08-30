@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var itemSchema = mongoose.Schema({
 	itemId: Number,
-	itemName: Number,
+	itemName: String,
 	sprite: String,
 	regionalStats: [{
 		regionName: String,
