@@ -13,7 +13,7 @@ var participantSchema = mongoose.Schema({
 	runes: [Number],
 	masteries: [Number],
 	items: [Number],
-	brawlerID: Number,
+	brawlerId: Number,
 	brawlerUpgrades: [Number],
 	inGameStats: {
 		creepScore: Number,

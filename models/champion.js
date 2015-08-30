@@ -69,7 +69,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		brawlers: [{
-			brawlerID: Number,
+			brawlerId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
