@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var matchSchematizer = require('./matchSchematizer.js');
+var matchSchematizer = require('./lib/riot/matchSchematizer.js');
 
 // handlebars
 var handlebars = require('express-handlebars').create({
