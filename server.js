@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var matchSchematizer = require('./lib/riot/matchSchematizer.js');
 
 // handlebars
 var handlebars = require('express-handlebars').create({
@@ -19,7 +18,7 @@ var opts = {
 };
 
 // custom modules
-var datasets = require('./lib/datasets.js');
+var datasets = require('./lib/riot/datasets.js');
 datasets.get('na');
 
 mongoose.connect(credentials.mongo.connectionString, opts);
