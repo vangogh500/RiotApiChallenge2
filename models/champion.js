@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-var schema = new Schema({ _id: false });
-
 var championSchema = mongoose.Schema({
 	championId: Number,
 	name: String,
