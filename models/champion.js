@@ -37,7 +37,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		summs: [{
-			summID: Number,
+			summId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
@@ -45,7 +45,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		runes: [{
-			runeID: Number,
+			runeId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
@@ -53,7 +53,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		masteries: [{
-			masteryID: Number,
+			masteryId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
@@ -61,7 +61,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		items: [{
-			itemID: Number,
+			itemId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
@@ -77,7 +77,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		brawlerUpgrades: [{
-			brawlerUpgradeID: Number,
+			brawlerUpgradeId: Number,
 			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
