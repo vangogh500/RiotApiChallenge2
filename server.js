@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var matchSchematizer = require('./matchSchematizer.js');
 
 // handlebars
 var handlebars = require('express-handlebars').create({
@@ -25,7 +26,7 @@ var riot = require('./lib/riot/riot.js')({
 	region: 'na'
 });
 
-riot.test(1907069332);
+riot.test(1907069332, matchSchematizer.schematize);
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
