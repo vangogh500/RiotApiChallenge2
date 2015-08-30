@@ -21,6 +21,7 @@ var championSchema = mongoose.Schema({
 		}],
 		roles: [{
 			roleName: String,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
