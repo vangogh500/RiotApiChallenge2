@@ -5,12 +5,16 @@ var itemSchema = mongoose.Schema({
 	itemName: Number,
 	imgURL: String,
 	regionalStats: [{
-		region: String,
+		regionName: String,
 		picks: Number,
 		wins: Number,
 		champions: [{
 			championId: Number,
 			matches: [Number]
+		}],
+		matches: [{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Match'
 		}]
 	}]
 });
