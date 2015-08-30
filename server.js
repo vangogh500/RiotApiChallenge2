@@ -19,7 +19,7 @@ var opts = {
 
 // custom modules
 var dataset = require('./lib/riot/dataset.js');
-dataset.get('na');
+dataset.loadDataSet('na');
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
