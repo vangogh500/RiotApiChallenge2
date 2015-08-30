@@ -69,7 +69,7 @@ var championSchema = mongoose.Schema({
 			}]
 		}],
 		brawlerUpgrades: [{
-			brawlerID: Number,
+			brawlerUpgradeID: Number,
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
