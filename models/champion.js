@@ -127,7 +127,7 @@ var championSchema = mongoose.Schema({
 			}	
 		}
 	}]
-}, { _id: false });
+});
 championSchema.methods.getWinRate = function(){
 	return (this.wins / this.picks);
 };
