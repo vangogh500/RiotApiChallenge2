@@ -20,10 +20,12 @@ var opts = {
 // custom modules
 var credentials = require('./credentials.js');
 var riot = require('./lib/riot/riot.js')({
-	key: credentials.riot.key
+	type = riot.types.matchWithTimeline,
+	key: credentials.riot.key,
+	region: 'NA'
 });
 
-riot.test();
+riot.test(1907069332);
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
