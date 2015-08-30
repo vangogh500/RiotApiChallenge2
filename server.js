@@ -19,14 +19,8 @@ var opts = {
 };
 
 // custom modules
-var credentials = require('./credentials.js');
-var riot = require('./lib/riot/riot.js')({
-	type: "match",
-	key: credentials.riot.key,
-	region: 'na'
-});
-
-riot.get(1907069332, matchSchematizer.schematize);
+var datasets = require('./lib/datasets.js');
+datasets.get('na');
 
 mongoose.connect(credentials.mongo.connectionString, opts);
 
