@@ -22,7 +22,7 @@ var credentials = require('./credentials.js');
 var riot = require('./lib/riot/riot.js')({
 	type: "match",
 	key: credentials.riot.key,
-	region: 'NA'
+	region: 'na'
 });
 
 riot.test(1907069332);
