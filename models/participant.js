@@ -3,6 +3,7 @@ var Schema = mongoose.Schema
 
 var participantSchema = mongoose.Schema({
 	participantId: Number,
+	teamId: Number,
 	championId: Number,
 	lane: String,
 	role: String,
