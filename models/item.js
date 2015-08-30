@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var itemSchema = mongoose.Schema({
 	itemId: Number,
 	itemName: Number,
-	imgURL: String,
+	sprite: String,
 	regionalStats: [{
 		regionName: String,
 		picks: Number,
