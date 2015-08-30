@@ -14,6 +14,7 @@ var championSchema = mongoose.Schema({
 		wins: Number,
 		lanes: [{
 			laneName: String,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -29,6 +30,7 @@ var championSchema = mongoose.Schema({
 		}],
 		ranks: [{
 			rankName: String,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -36,6 +38,7 @@ var championSchema = mongoose.Schema({
 		}],
 		summs: [{
 			summID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -43,6 +46,7 @@ var championSchema = mongoose.Schema({
 		}],
 		runes: [{
 			runeID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -50,6 +54,7 @@ var championSchema = mongoose.Schema({
 		}],
 		masteries: [{
 			masteryID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -57,6 +62,7 @@ var championSchema = mongoose.Schema({
 		}],
 		items: [{
 			itemID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -64,6 +70,7 @@ var championSchema = mongoose.Schema({
 		}],
 		brawlers: [{
 			brawlerID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
@@ -71,6 +78,7 @@ var championSchema = mongoose.Schema({
 		}],
 		brawlerUpgrades: [{
 			brawlerUpgradeID: Number,
+			_id: { type: mongoose.Schema.Types.ObjectId, select: false },
 			matches: [{
 				type: mongoose.Schema.Types.ObjectId,
 				ref: 'Match' 
