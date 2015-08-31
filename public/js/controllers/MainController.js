@@ -1,7 +1,6 @@
 app.controller('MainController',['$http', function($http) {
 	var self = this;
 	self.name = "test";
-	self.champions = [];
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
 		self.winRates = winRates();
@@ -19,8 +18,6 @@ app.controller('MainController',['$http', function($http) {
 				championTotalPicks += regionalStat.picks;
 				championTotalWins += regionalStat.wins;
 			});
-			console.log("total picks: " + championTotalPicks);
-			console.log("total wins: " + championTotalWins);
 			data.push({
 				key: champion.name,
 				values: [{
@@ -29,9 +26,9 @@ app.controller('MainController',['$http', function($http) {
 				}]
 			});
 		});
-		console.log(data);
 		return data;
 	};
+	
 	
 	self.exampleData = [
 		{"key":"Group 0",
