@@ -11,6 +11,7 @@ module.exports = function(app) {
 	app.get('/api/champions', function(req,res) {
 		Champion.find(function(err, champions) {
 			if(err) res.send(err)
+			res.setHeader("Access-Control-Allow-Origin", "*");
 			res.json(champions);	
 		});
 	});

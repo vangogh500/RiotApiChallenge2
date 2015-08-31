@@ -6,10 +6,20 @@ google.setOnLoadCallback(function() {
 
 app.controller('MainController',['$http', function($http) {
 	var self = this;
+	
+	var options = {
+	  hAxis: {title: 'Win Rates', minValue: -1, maxValue: 1},
+	  vAxis: {title: 'Picks', minValue: 0, maxValue: 15},
+	  legend: 'none'
+	};
+
+	var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+	
 	self.name = "test";
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
 		self.winRates = winRates();
+		chart.draw(self.winRates, options);
 	}, function(err) {
 		console.error(err);
 	});
@@ -27,27 +37,6 @@ app.controller('MainController',['$http', function($http) {
 			data.push([championTotalWins/championTotalPicks, championTotalPicks]);
 		});
 		console.log(data);
-		return data;
+		return google.visualization.arrayToDataTable([data]);
 	};
-	
-	var data = google.visualization.arrayToDataTable([
-	  ['Age', 'Weight'],
-	  [ 8,      12],
-	  [ 4,      5.5],
-	  [ 11,     14],
-	  [ 4,      5],
-	  [ 3,      3.5],
-	  [ 6.5,    7]
-	]);
-
-	var options = {
-	  title: 'Age vs. Weight comparison',
-	  hAxis: {title: 'Age', minValue: 0, maxValue: 15},
-	  vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-	  legend: 'none'
-	};
-
-	var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-
-	chart.draw(data, options);
 }]);
