@@ -23,7 +23,7 @@ app.controller('MainController',['$http', function($http) {
 				values: [{
 					x: championTotalPicks,
 					y: championTotalWins / championTotalPicks,
-					size: 5.0
+					size: 0.8
 				}]
 			});
 		});
