@@ -8,7 +8,7 @@ app.controller('MainController',['$http', function($http) {
 		console.error(err);
 	});
 	
-	self.winRates = function() {
+	var winRates = function() {
 		var data = [];
 		self.champions.forEach(function(champion){
 			var championTotalPicks = 0;
@@ -27,6 +27,8 @@ app.controller('MainController',['$http', function($http) {
 		});
 		console.log(data);
 	};
+	
+	self.winRates = winRates();
 	
 	
 	self.exampleData = [
