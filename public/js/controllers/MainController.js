@@ -4,10 +4,30 @@ app.controller('MainController',['$http', function($http) {
 	self.champions = [];
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
-		console.log(self.champions);
 	}, function(err) {
 		console.error(err);
 	});
+	
+	self.winRates = function() {
+		var data = [];
+		self.champions.forEach(function(champion){
+			var championTotalPicks = 0;
+			var championTotalWins = 0;
+			champion.regionalStats.forEach(function(regionalStat) {
+				championTotalPicks += regionalStat.picks;
+				championTotalWins += regionalStat.wins;
+			});
+			data.push({
+				key: champion.name,
+				values: [{
+					x: championTotalPicks,
+					y: championTotalWins / championTotalPicks
+				}]
+			});
+		});
+		console.log(data);
+	};
+	
 	
 	self.exampleData = [
 		{"key":"Group 0",
