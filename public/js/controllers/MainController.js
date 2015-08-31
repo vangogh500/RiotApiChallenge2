@@ -4,6 +4,7 @@ app.controller('MainController',['$http', function($http) {
 	self.champions = [];
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
+		self.winRates = winRates();
 	}, function(err) {
 		console.error(err);
 	});
@@ -30,9 +31,6 @@ app.controller('MainController',['$http', function($http) {
 		console.log(data);
 		return data;
 	};
-	
-	self.winRates = winRates();
-	
 	
 	self.exampleData = [
 		{"key":"Group 0",
