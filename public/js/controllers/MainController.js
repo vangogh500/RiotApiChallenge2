@@ -27,6 +27,7 @@ app.controller('MainController',['$http', function($http) {
 				}]
 			});
 		});
+		console.log(data);
 		return data;
 	};
 	
