@@ -6,11 +6,6 @@
 	<script src="/components/nvd3/nv.d3.js"></script>
 	<script src="/components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
 	<link rel="stylesheet" href="/components/nvd3/nv.d3.css"/>
-	<script>
-	    function ExampleCtrl($scope){
-			
-    	}
-	</script>
 {{/section}}
 
 <div ng-app='app'>
@@ -24,6 +19,9 @@
             xAxisTickFormat="xAxisTickFormatFunction()">
         		<svg></svg>
    	 	</nvd3-scatter-chart>
+   	 	<div>
+   	 		<p>{{ctrl.champions}}</p>
+   	 	</div>
 	</div>
 </div>
 

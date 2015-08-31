@@ -1,5 +1,11 @@
-app.controller('MainController',[function() {
+app.controller('MainController',['$http', function('$http') {
 	var self = this;
+	
+	$http.get('/api/champions').then(function(res) {
+		self.champions = res.data;
+	}, function(err) {
+		console.error(err);
+	});
 	
 	self.exampleData = [
 		{"key":"Group 0",
