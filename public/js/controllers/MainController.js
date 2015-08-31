@@ -1,6 +1,6 @@
 app.controller('MainController',['$http', function($http) {
 	var self = this;
-	
+	self.name = "test";
 	self.champions = [];
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
