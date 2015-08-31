@@ -11,12 +11,14 @@ app.controller('MainController',['$http', function($http) {
 	var winRates = function() {
 		var data = [];
 		self.champions.forEach(function(champion){
+			console.log("processing: " + champion.name);
 			var championTotalPicks = 0;
 			var championTotalWins = 0;
 			champion.regionalStats.forEach(function(regionalStat) {
 				championTotalPicks += regionalStat.picks;
 				championTotalWins += regionalStat.wins;
 			});
+			console.log("total picks: " + championTotalPicks);
 			data.push({
 				key: champion.name,
 				values: [{
@@ -26,6 +28,7 @@ app.controller('MainController',['$http', function($http) {
 			});
 		});
 		console.log(data);
+		return data;
 	};
 	
 	self.winRates = winRates();
