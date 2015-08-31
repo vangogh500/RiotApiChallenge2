@@ -1,4 +1,4 @@
-app.controller('MainController',['$http', function('$http') {
+app.controller('MainController',['$http', function($http) {
 	var self = this;
 	
 	$http.get('/api/champions').then(function(res) {
