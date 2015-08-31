@@ -22,7 +22,8 @@ app.controller('MainController',['$http', function($http) {
 				key: champion.name,
 				values: [{
 					x: championTotalPicks,
-					y: championTotalWins / championTotalPicks
+					y: championTotalWins / championTotalPicks,
+					size: 1.5
 				}]
 			});
 		});
