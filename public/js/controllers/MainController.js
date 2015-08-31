@@ -15,7 +15,7 @@ app.controller('MainController',['$http', function($http) {
 	});
 	
 	var winRates = function() {
-		var data = [];
+		var data = [['Picks', 'Win Rate']];
 		self.champions.forEach(function(champion){
 			console.log("processing: " + champion.name);
 			var championTotalPicks = 0;
@@ -24,42 +24,30 @@ app.controller('MainController',['$http', function($http) {
 				championTotalPicks += regionalStat.picks;
 				championTotalWins += regionalStat.wins;
 			});
-			data.push({
-				key: champion.name,
-				values: [{
-					x: championTotalPicks,
-					y: championTotalWins / championTotalPicks,
-					size: 0.2
-				}]
-			});
+			data.push([championTotalWins/championTotalPicks, championTotalPicks]);
 		});
 		console.log(data);
 		return data;
 	};
 	
-	
-	google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Age', 'Weight'],
-          [ 8,      12],
-          [ 4,      5.5],
-          [ 11,     14],
-          [ 4,      5],
-          [ 3,      3.5],
-          [ 6.5,    7]
-        ]);
+	var data = google.visualization.arrayToDataTable([
+	  ['Age', 'Weight'],
+	  [ 8,      12],
+	  [ 4,      5.5],
+	  [ 11,     14],
+	  [ 4,      5],
+	  [ 3,      3.5],
+	  [ 6.5,    7]
+	]);
 
-        var options = {
-          title: 'Age vs. Weight comparison',
-          hAxis: {title: 'Age', minValue: 0, maxValue: 15},
-          vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
-          legend: 'none'
-        };
+	var options = {
+	  title: 'Age vs. Weight comparison',
+	  hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+	  vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+	  legend: 'none'
+	};
 
-        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+	var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
 
-        chart.draw(data, options);
-      }
+	chart.draw(data, options);
 }]);
