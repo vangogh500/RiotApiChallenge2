@@ -20,6 +20,7 @@ app.controller('MainController',['$http', function($http) {
 				championTotalWins += regionalStat.wins;
 			});
 			console.log("total picks: " + championTotalPicks);
+			console.log("total wins: " + championTotalWins);
 			data.push({
 				key: champion.name,
 				values: [{
