@@ -4,6 +4,7 @@ app.controller('MainController',['$http', function($http) {
 	self.champions = [];
 	$http.get('/api/champions').then(function(res) {
 		self.champions = res.data;
+		console.log(self.champions);
 	}, function(err) {
 		console.error(err);
 	});
