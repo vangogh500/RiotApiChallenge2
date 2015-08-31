@@ -7,9 +7,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "angular": "~1.4.5",
-    "angularjs-nvd3-directives": "~0.0.7",
-    "d3": "~3.5.6",
-    "nvd3": "~1.8.1"
+    "angular": "~1.4.5"
   }
 }
