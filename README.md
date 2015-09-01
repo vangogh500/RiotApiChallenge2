@@ -3,6 +3,7 @@
 ## Overview
 Black Market Statistics is a web app, which collects statistics on Black Market Brawler matches from the Riot API.
 The app utilizes a node.js server using the express.js environment and is hosted via OpenShift.
+The app (still in development) is available at http://blackmarketstats-vangogh500.rhcloud.com/
 
 **Note:**
 Unfortunately due to how OpenShift works, I have to commit and push to make alterations to the app. It would probably be unwisely to have two seperate git repositories for the same project, thus the commits on this repo are ubundant with tests and bug fixes that had to be dealt with in real time.
@@ -68,6 +69,10 @@ To make data visible to the client a basic api is set up to serve information fr
  
  - AngularJs v1.4.5
  - Google Visualization Library
+
+### Changelog
+
+ - v0.0.1 Collected match datas from NA, implemented a basic display of win rates vs. pick rates
 
 ## Goals
 The goal of this app is to serve statistics on Black Market Brawler matches in a flexible/interactive way.
