@@ -63,3 +63,8 @@ body {
 	background-color: #fff;
 	border-bottom: 2px solid #aaa;
 }
+
+.container {
+	margin-left: 250px;
+	padding: 25px;
+}

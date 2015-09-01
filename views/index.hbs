@@ -1,4 +1,7 @@
 {{#section 'head'}}
+	<-- Style Sheets -->
+	<link href='/css/index.css' type="text/css" rel='stylesheet'>
+	
 	<!-- Foreign Libraries -->
 	<script src="/components/angular/angular.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -6,13 +9,22 @@
 
 
 <div ng-controller="MainController as ctrl">
-	<div id="chart_div" style="width: 900px; height: 500px;"></div>
-	<div>
-		<p>//ctrl.name//</p>
+	<div class="chartWithOverlay">
+		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+		<div class="overlay" ng-repeat="champion in ctrl.championStats" ng-attr-id="{[{ctrl.getDivId(champion)}]}" ng-background-url="{[{champion.sprite}]}" on-last-repeat>
+		</div>
 	</div>
 </div>
 
 <!-- Modules -->
-<script src="/js/app.js"></script>
+<script src="js/app.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/onLastRepeat.js"></script>
+<script src="js/directives/ngBackgroundUrl.js"></script>
+
+<!-- Services -->
+<script src="js/services/champions.js"></script>
+
 <!-- Controllers -->
-<script src="/js/controllers/MainController.js"></script>
+<script src="js/controllers/MainController.js"></script>

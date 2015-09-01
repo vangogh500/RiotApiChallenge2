@@ -1,0 +1,17 @@
+.chartWithOverlay {
+	position: relative:
+	width: 700px;
+	
+}
+.overlay {
+	width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    transition: top 1s ease-in-out;
+}
+.overlay:hover {
+	width: 35px;
+	height: 35px;
+}
